@@ -26,8 +26,8 @@ export default function ContatoPage() {
           <div className="mt-8 flex flex-col gap-4 text-sm">
             <div className="flex flex-col gap-1">
               <span className="text-xs tracking-[0.18em] text-[var(--color-ink-faint)]">E-MAIL</span>
-              <a href="mailto:contato@sofspace.com.br" className="focus-ring w-fit hover:text-[var(--color-ink-soft)]">
-                contato@sofspace.com.br
+              <a href="mailto:sofiamarianolima@hotmail.com" className="focus-ring w-fit hover:text-[var(--color-ink-soft)]">
+                sofiamarianolima@hotmail.com
               </a>
             </div>
             <div className="flex flex-col gap-1">

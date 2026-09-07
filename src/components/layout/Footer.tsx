@@ -38,10 +38,10 @@ export function Footer() {
               @s0fpace
             </a>
             <a
-              href="mailto:contato@sofspace.com.br"
+              href="mailto:sofiamarianolima@hotmail.com"
               className="focus-ring w-fit hover:text-[var(--color-ink-soft)]"
             >
-              contato@sofspace.com.br
+              sofiamarianolima@hotmail.com
             </a>
           </div>
         </div>
