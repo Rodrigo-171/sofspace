@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
+import { getWhatsAppLink, WHATSAPP_DISPLAY } from "@/lib/contact";
 
 export function Footer() {
   return (
@@ -42,6 +43,14 @@ export function Footer() {
               className="focus-ring w-fit hover:text-[var(--color-ink-soft)]"
             >
               sofiamarianolima@hotmail.com
+            </a>
+            <a
+              href={getWhatsAppLink()}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="focus-ring w-fit hover:text-[var(--color-ink-soft)]"
+            >
+              {WHATSAPP_DISPLAY}
             </a>
           </div>
         </div>

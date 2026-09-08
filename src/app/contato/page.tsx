@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Reveal } from "@/components/ui/Reveal";
+import { getWhatsAppLink, WHATSAPP_DISPLAY } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Contato",
@@ -39,6 +40,17 @@ export default function ContatoPage() {
                 className="focus-ring w-fit hover:text-[var(--color-ink-soft)]"
               >
                 @s0fspace
+              </a>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-xs tracking-[0.18em] text-[var(--color-ink-faint)]">WHATSAPP</span>
+              <a
+                href={getWhatsAppLink()}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="focus-ring w-fit hover:text-[var(--color-ink-soft)]"
+              >
+                {WHATSAPP_DISPLAY}
               </a>
             </div>
             <div className="flex flex-col gap-1">

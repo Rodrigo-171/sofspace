@@ -27,33 +27,40 @@ export function Header() {
   const textOnHero = isHeroPage && !scrolled && !menuOpen;
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-        isSolid ? "bg-[var(--color-paper)]/90 backdrop-blur-sm" : "bg-transparent"
-      }`}
-    >
-      <div
-        className={`container-editorial flex items-center justify-between border-b transition-colors duration-500 ${
-          isSolid ? "border-[var(--color-line)]" : "border-transparent"
-        } ${textOnHero ? "text-[var(--color-paper)]" : ""}`}
-        style={{ height: "var(--header-height, 84px)" }}
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
+          isSolid ? "bg-[var(--color-paper)]/90 backdrop-blur-sm" : "bg-transparent"
+        }`}
       >
-        <Logo />
-
-        <Navigation className="hidden md:block" />
-
-        <button
-          type="button"
-          onClick={() => setMenuOpen((value) => !value)}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          className="focus-ring text-xs tracking-[0.2em] md:hidden"
+        <div
+          className={`container-editorial flex items-center justify-between border-b transition-colors duration-500 ${
+            isSolid ? "border-[var(--color-line)]" : "border-transparent"
+          } ${textOnHero ? "text-[var(--color-paper)]" : ""}`}
+          style={{ height: "var(--header-height, 84px)" }}
         >
-          {menuOpen ? "FECHAR" : "MENU"}
-        </button>
-      </div>
+          <Logo />
 
+          <Navigation className="hidden md:block" />
+
+          <button
+            type="button"
+            onClick={() => setMenuOpen((value) => !value)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            className="focus-ring text-xs tracking-[0.2em] md:hidden"
+          >
+            {menuOpen ? "FECHAR" : "MENU"}
+          </button>
+        </div>
+      </header>
+
+      {/* Rendered outside <header> deliberately: that element gets a
+          backdrop-blur when this menu is open, and backdrop-filter on an
+          ancestor turns it into the containing block for fixed-position
+          descendants — which would confine this "fixed inset-0" overlay
+          to the header's own small box instead of the full viewport. */}
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
-    </header>
+    </>
   );
 }
