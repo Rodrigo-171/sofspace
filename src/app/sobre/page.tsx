@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "Sobre",
   description:
-    "Sofia Mariano Lima é a arquiteta responsável pela SOFSPACE, estúdio autoral de arquitetura e interiores em Barueri, São Paulo.",
+    "Sofia Mariano Lima é arquiteta e urbanista, formada pela Belas Artes, e conduz a SOFSPACE, estúdio autoral de arquitetura e interiores em Barueri, São Paulo.",
   alternates: { canonical: "/sobre" },
 };
 
@@ -33,32 +33,41 @@ export default function SobrePage() {
               Sofia Mariano Lima
             </h1>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)] sm:text-lg">
-              Sofia conduz a SOFSPACE de forma autoral e independente, do primeiro esboço ao
-              último acabamento. Trabalha principalmente com arquitetura residencial e design de
-              interiores, além de projetos comerciais pontuais, sempre próxima de quem vai viver
-              ou trabalhar no espaço.
+              Arquiteta e urbanista formada pela Belas Artes em 2025, Sofia conduz a SOFSPACE de
+              forma autoral e próxima. Seu trabalho parte da escuta para transformar necessidades,
+              desejos e personalidade em espaços que façam sentido para quem os vive.
             </p>
           </Reveal>
 
           <Reveal className="flex flex-col gap-6">
             <h2 className="font-serif-display text-2xl">Abordagem</h2>
-            <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
-              Cada projeto começa com escuta, não com desenho. Sofia investe tempo em entender a
-              rotina de quem vai morar ali, a orientação solar do terreno e os materiais que fazem
-              sentido para aquele lugar específico, antes de propor qualquer solução.
+            <p className="font-serif-display text-xl italic text-[var(--color-ink-soft)]">
+              Antes do desenho, vem a conversa.
             </p>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
-              O resultado busca ser discreto e duradouro: espaços que não dependem de tendência
-              para envelhecer bem, e que se ajustam à vida de quem os habita — não o contrário.
+              Sofia busca entender a rotina, os desejos e a personalidade de cada cliente para
+              criar espaços onde funcionalidade, conforto e identidade coexistam naturalmente.
+            </p>
+            <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
+              Madeira, elementos naturais e cores fazem parte do seu repertório, mas não existem
+              fórmulas. Cada projeto encontra sua própria linguagem — porque, para Sofia, um
+              espaço só está verdadeiramente resolvido quando quem vive nele consegue se
+              reconhecer.
             </p>
           </Reveal>
 
           <Reveal className="flex flex-col gap-6">
-            <h2 className="font-serif-display text-2xl">Arquitetura e cotidiano</h2>
+            <h2 className="font-serif-display text-2xl">Por que SOFSPACE?</h2>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
-              Para Sofia, um bom projeto se prova no uso — na luz que entra na hora certa, no
-              caminho curto entre a cozinha e a mesa, no silêncio de um material bem escolhido. É
-              esse cuidado com o cotidiano que orienta cada decisão da SOFSPACE.
+              SOFSPACE nasce do mundo de Sofia. Desde pequena, ela sempre gostou de olhar o mundo
+              por outras perspectivas — e <em>space</em> não representa apenas o espaço físico,
+              mas também o espaço onde vivemos, construímos nossas experiências e formamos nossa
+              maneira de enxergar o mundo.
+            </p>
+            <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
+              É o espaço da própria Sofia: uma mente em constante movimento, mudança e descoberta.
+              Em cada projeto, um pouco desse mundo encontra o mundo de quem vai viver aquele
+              espaço — e é desse encontro que nasce a arquitetura.
             </p>
           </Reveal>
 

@@ -62,7 +62,7 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${SITE_URL}/#sofia`,
       name: "Sofia Mariano Lima",
-      jobTitle: "Arquiteta",
+      jobTitle: "Arquiteta e Urbanista",
       worksFor: { "@id": `${SITE_URL}/#organization` },
       address: {
         "@type": "PostalAddress",

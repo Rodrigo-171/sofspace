@@ -24,9 +24,9 @@ export function AboutPreview() {
             Sofia Mariano Lima
           </h2>
           <p className="max-w-lg text-base leading-relaxed text-[var(--color-ink-soft)]">
-            Arquiteta à frente da SOFSPACE, Sofia conduz cada projeto de forma autoral — do
-            primeiro esboço ao último acabamento. Seu processo parte da escuta: da rotina de
-            quem vai morar no espaço, do terreno, da luz, antes de qualquer traço.
+            Arquiteta e urbanista formada pela Belas Artes, Sofia conduz a SOFSPACE de forma
+            autoral e próxima. Seu trabalho parte da escuta para transformar necessidades,
+            desejos e personalidade em espaços que façam sentido para quem os vive.
           </p>
           <Link
             href="/sobre"
