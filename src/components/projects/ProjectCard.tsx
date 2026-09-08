@@ -8,16 +8,17 @@ interface ProjectCardProps {
   index: number;
   sizes: string;
   priority?: boolean;
+  ratio?: string;
 }
 
-export function ProjectCard({ project, index, sizes, priority = false }: ProjectCardProps) {
+export function ProjectCard({ project, index, sizes, priority = false, ratio }: ProjectCardProps) {
   return (
     <Link
       href={`/projetos/${project.slug}`}
       className="focus-ring group flex flex-col gap-4"
     >
       <span className="sr-only">Ver projeto: </span>
-      <ImageFrame image={project.coverImage} sizes={sizes} priority={priority} zoom className="w-full" />
+      <ImageFrame image={project.coverImage} sizes={sizes} priority={priority} zoom ratio={ratio} className="w-full" />
 
       <div className="flex items-start justify-between gap-4">
         <div className="flex flex-col gap-1">

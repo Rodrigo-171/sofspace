@@ -5,33 +5,39 @@ interface ProjectGridProps {
   projects: Project[];
 }
 
-/**
- * Editorial, asymmetric layout — deliberately not a uniform card grid.
- * Column span + vertical offset cycle every three projects so image scale
- * varies as you scroll, per brief section 7/8.
- */
-const PATTERN = [
-  { span: "md:col-span-7", offset: "" },
-  { span: "md:col-span-5", offset: "md:mt-20" },
-  { span: "md:col-span-8 md:col-start-3", offset: "" },
-];
+// Cards share one crop ratio so rows line up evenly even though the
+// source photography varies wildly in orientation — the individual
+// project page still shows every photo at its true, uncropped ratio.
+const CARD_RATIO = "4 / 3";
+const LEAD_RATIO = "2 / 1";
 
 export function ProjectGrid({ projects }: ProjectGridProps) {
+  const [lead, ...rest] = projects;
+  if (!lead) return null;
+
   return (
-    <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-12 md:gap-y-24">
-      {projects.map((project, index) => {
-        const pattern = PATTERN[index % PATTERN.length];
-        return (
-          <div key={project.slug} className={`col-span-1 ${pattern.span} ${pattern.offset}`}>
+    <div className="flex flex-col gap-10 sm:gap-14">
+      <ProjectCard
+        project={lead}
+        index={0}
+        priority
+        ratio={LEAD_RATIO}
+        sizes="100vw"
+      />
+
+      {rest.length > 0 && (
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-14">
+          {rest.map((project, index) => (
             <ProjectCard
+              key={project.slug}
               project={project}
-              index={index}
-              priority={index === 0}
-              sizes={pattern.span.includes("col-span-8") ? "(min-width: 768px) 66vw, 100vw" : "(min-width: 768px) 45vw, 100vw"}
+              index={index + 1}
+              ratio={CARD_RATIO}
+              sizes="(min-width: 640px) 45vw, 100vw"
             />
-          </div>
-        );
-      })}
+          ))}
+        </div>
+      )}
     </div>
   );
 }
