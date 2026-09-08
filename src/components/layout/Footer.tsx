@@ -30,12 +30,12 @@ export function Footer() {
           <div className="flex flex-col gap-3">
             <span className="text-xs tracking-[0.2em] text-[var(--color-ink-faint)]">CONTATO</span>
             <a
-              href="https://instagram.com/s0fpace"
+              href="https://instagram.com/s0fspace"
               target="_blank"
               rel="noreferrer noopener"
               className="focus-ring w-fit hover:text-[var(--color-ink-soft)]"
             >
-              @s0fpace
+              @s0fspace
             </a>
             <a
               href="mailto:sofiamarianolima@hotmail.com"

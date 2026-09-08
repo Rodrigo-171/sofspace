@@ -54,7 +54,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#organization`,
       name: "SOFSPACE",
       url: SITE_URL,
-      sameAs: ["https://instagram.com/s0fpace"],
+      sameAs: ["https://instagram.com/s0fspace"],
       founder: { "@id": `${SITE_URL}/#sofia` },
     },
     {
