@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL || "sofiamarianolima@hotmail.com";
+// Resend's shared sandbox sender — works with no domain verification as
+// long as the account is only sending to its own verified account email.
+const FROM_ADDRESS = process.env.RESEND_FROM || "SOFSPACE — Site <onboarding@resend.dev>";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -10,19 +13,6 @@ interface ContactPayload {
   email?: unknown;
   message?: unknown;
   company?: unknown; // honeypot — real visitors never fill this in
-}
-
-function getTransporter() {
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env;
-  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS) {
-    return null;
-  }
-  return nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: Number(SMTP_PORT),
-    secure: Number(SMTP_PORT) === 465,
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
-  });
 }
 
 export async function POST(request: Request) {
@@ -54,32 +44,37 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Preencha os campos corretamente." }, { status: 400 });
   }
 
-  const transporter = getTransporter();
-  if (!transporter) {
-    console.error("SMTP não configurado: defina SMTP_HOST, SMTP_PORT, SMTP_USER e SMTP_PASS.");
+  if (!process.env.RESEND_API_KEY) {
+    console.error("RESEND_API_KEY não configurada.");
     return NextResponse.json(
       { ok: false, error: "Envio de e-mail indisponível no momento. Tente novamente mais tarde." },
       { status: 503 }
     );
   }
 
-  try {
-    await transporter.sendMail({
-      from: `"SOFSPACE — Site" <${process.env.SMTP_USER}>`,
-      to: CONTACT_TO_EMAIL,
-      replyTo: email.trim(),
-      subject: `Novo contato pelo site — ${name.trim()}`,
-      text: `Nome: ${name.trim()}\nE-mail: ${email.trim()}\n\nMensagem:\n${message.trim()}`,
-      html: `<p><strong>Nome:</strong> ${escapeHtml(name.trim())}</p><p><strong>E-mail:</strong> ${escapeHtml(email.trim())}</p><p><strong>Mensagem:</strong></p><p>${escapeHtml(message.trim()).replace(/\n/g, "<br />")}</p>`,
-    });
-    return NextResponse.json({ ok: true });
-  } catch (error) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const trimmedName = name.trim();
+  const trimmedEmail = email.trim();
+  const trimmedMessage = message.trim();
+
+  const { error } = await resend.emails.send({
+    from: FROM_ADDRESS,
+    to: CONTACT_TO_EMAIL,
+    replyTo: trimmedEmail,
+    subject: `Novo contato pelo site — ${trimmedName}`,
+    text: `Nome: ${trimmedName}\nE-mail: ${trimmedEmail}\n\nMensagem:\n${trimmedMessage}`,
+    html: `<p><strong>Nome:</strong> ${escapeHtml(trimmedName)}</p><p><strong>E-mail:</strong> ${escapeHtml(trimmedEmail)}</p><p><strong>Mensagem:</strong></p><p>${escapeHtml(trimmedMessage).replace(/\n/g, "<br />")}</p>`,
+  });
+
+  if (error) {
     console.error("Falha ao enviar e-mail de contato:", error);
     return NextResponse.json(
       { ok: false, error: "Não foi possível enviar sua mensagem. Tente novamente mais tarde." },
       { status: 502 }
     );
   }
+
+  return NextResponse.json({ ok: true });
 }
 
 function escapeHtml(value: string) {
