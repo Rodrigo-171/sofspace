@@ -16,7 +16,7 @@ export function Logo({ variant = "mark", className = "" }: LogoProps) {
   return (
     <Link
       href="/"
-      aria-label="SOFSPACE — página inicial"
+      aria-label="SOFSPACE, página inicial"
       className={`focus-ring group inline-flex items-center gap-3 ${className}`}
     >
       <span

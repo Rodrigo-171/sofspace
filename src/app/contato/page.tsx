@@ -20,7 +20,7 @@ export default function ContatoPage() {
             Vamos conversar sobre o seu espaço?
           </h1>
           <p className="max-w-sm text-base leading-relaxed text-[var(--color-ink-soft)]">
-            Conte um pouco sobre o seu projeto — residencial, interiores ou comercial — e Sofia
+            Conte um pouco sobre o seu projeto, residencial, interiores ou comercial, e Sofia
             retorna para conversar sobre os próximos passos.
           </p>
 

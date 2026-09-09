@@ -22,8 +22,8 @@ const SITE_URL = "https://sofspace.com.br";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "SOFSPACE — Sofia Mariano Lima, Arquitetura",
-    template: "SOFSPACE — %s",
+    default: "SOFSPACE, Sofia Mariano Lima, Arquitetura",
+    template: "SOFSPACE, %s",
   },
   description:
     "SOFSPACE é o estúdio autoral de arquitetura e design de interiores de Sofia Mariano Lima, em Barueri, São Paulo. Projetos residenciais, interiores e comerciais.",
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "SOFSPACE",
-    title: "SOFSPACE — Sofia Mariano Lima, Arquitetura",
+    title: "SOFSPACE, Sofia Mariano Lima, Arquitetura",
     description:
       "Arquitetura residencial e design de interiores conduzidos de forma autoral por Sofia Mariano Lima.",
     url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
-    title: "SOFSPACE — Sofia Mariano Lima, Arquitetura",
+    title: "SOFSPACE, Sofia Mariano Lima, Arquitetura",
     description:
       "Arquitetura residencial e design de interiores conduzidos de forma autoral por Sofia Mariano Lima.",
   },

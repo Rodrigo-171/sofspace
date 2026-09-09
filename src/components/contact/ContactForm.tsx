@@ -46,7 +46,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-3 border border-[var(--color-line)] p-8">
         <p className="font-serif-display text-2xl">Mensagem enviada.</p>
         <p className="text-sm leading-relaxed text-[var(--color-ink-soft)]">
-          Obrigada pelo contato — Sofia responde em breve.
+          Obrigada pelo contato, Sofia responde em breve.
         </p>
       </div>
     );

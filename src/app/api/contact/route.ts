@@ -4,7 +4,7 @@ import { Resend } from "resend";
 const CONTACT_TO_EMAIL = process.env.CONTACT_TO_EMAIL || "sofiamarianolima@hotmail.com";
 // Resend's shared sandbox sender — works with no domain verification as
 // long as the account is only sending to its own verified account email.
-const FROM_ADDRESS = process.env.RESEND_FROM || "SOFSPACE — Site <onboarding@resend.dev>";
+const FROM_ADDRESS = process.env.RESEND_FROM || "SOFSPACE Site <onboarding@resend.dev>";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     from: FROM_ADDRESS,
     to: CONTACT_TO_EMAIL,
     replyTo: trimmedEmail,
-    subject: `Novo contato pelo site — ${trimmedName}`,
+    subject: `Novo contato de ${trimmedName} pelo site`,
     text: `Nome: ${trimmedName}\nE-mail: ${trimmedEmail}\n\nMensagem:\n${trimmedMessage}`,
     html: `<p><strong>Nome:</strong> ${escapeHtml(trimmedName)}</p><p><strong>E-mail:</strong> ${escapeHtml(trimmedEmail)}</p><p><strong>Mensagem:</strong></p><p>${escapeHtml(trimmedMessage).replace(/\n/g, "<br />")}</p>`,
   });

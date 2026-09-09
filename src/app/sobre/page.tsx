@@ -52,7 +52,7 @@ export default function SobrePage() {
             </p>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
               Madeira, elementos naturais e cores fazem parte do meu repertório, mas não existem
-              fórmulas. Cada projeto encontra sua própria linguagem — porque, para mim, um espaço
+              fórmulas. Cada projeto encontra sua própria linguagem, porque, para mim, um espaço
               só está verdadeiramente resolvido quando quem vive nele consegue se reconhecer.
             </p>
           </Reveal>
@@ -61,14 +61,14 @@ export default function SobrePage() {
             <h2 className="font-serif-display text-2xl">Por que SOFSPACE?</h2>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
               SOFSPACE nasce do meu mundo. Desde pequena, sempre gostei de olhar o mundo por
-              outras perspectivas — e <em>space</em> não representa apenas o espaço físico, mas
+              outras perspectivas, e <em>space</em> não representa apenas o espaço físico, mas
               também o espaço onde vivemos, construímos nossas experiências e formamos nossa
               maneira de enxergar o mundo.
             </p>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
               É o meu próprio espaço: uma mente em constante movimento, mudança e descoberta. Em
-              cada projeto, um pouco desse mundo encontra o mundo de quem vai viver aquele espaço
-              — e é desse encontro que nasce a arquitetura.
+              cada projeto, um pouco desse mundo encontra o mundo de quem vai viver aquele espaço,
+              e é desse encontro que nasce a arquitetura.
             </p>
           </Reveal>
 

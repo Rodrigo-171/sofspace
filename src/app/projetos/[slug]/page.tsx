@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     description: project.excerpt,
     alternates: { canonical: `/projetos/${project.slug}` },
     openGraph: {
-      title: `SOFSPACE — ${project.title}`,
+      title: `SOFSPACE, ${project.title}`,
       description: project.excerpt,
       images: [{ url: project.coverImage.src }],
     },
