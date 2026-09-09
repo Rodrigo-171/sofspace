@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { Specialties } from "@/components/about/Specialties";
+import { ToolsMarquee } from "@/components/about/ToolsMarquee";
 
 export const metadata: Metadata = {
   title: "Sobre",
@@ -72,6 +74,10 @@ export default function SobrePage() {
           </Reveal>
 
           <Reveal>
+            <Specialties />
+          </Reveal>
+
+          <Reveal>
             <Link
               href="/contato"
               className="focus-ring inline-flex items-center border border-[var(--color-ink)] px-8 py-4 text-xs tracking-[0.2em] transition-colors hover:bg-[var(--color-ink)] hover:text-[var(--color-paper)]"
@@ -81,6 +87,12 @@ export default function SobrePage() {
           </Reveal>
         </div>
       </section>
+
+      <div className="container-editorial pb-20 sm:pb-28">
+        <Reveal>
+          <ToolsMarquee />
+        </Reveal>
+      </div>
     </div>
   );
 }
