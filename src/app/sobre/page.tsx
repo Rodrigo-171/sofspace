@@ -35,8 +35,8 @@ export default function SobrePage() {
               Sofia Mariano Lima
             </h1>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)] sm:text-lg">
-              Arquiteta e urbanista formada pela Belas Artes em 2025, Sofia conduz a SOFSPACE de
-              forma autoral e próxima. Seu trabalho parte da escuta para transformar necessidades,
+              Sou arquiteta e urbanista, formada pela Belas Artes em 2025, e conduzo a SOFSPACE de
+              forma autoral e próxima. Meu trabalho parte da escuta para transformar necessidades,
               desejos e personalidade em espaços que façam sentido para quem os vive.
             </p>
           </Reveal>
@@ -47,29 +47,28 @@ export default function SobrePage() {
               Antes do desenho, vem a conversa.
             </p>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
-              Sofia busca entender a rotina, os desejos e a personalidade de cada cliente para
-              criar espaços onde funcionalidade, conforto e identidade coexistam naturalmente.
+              Busco entender a rotina, os desejos e a personalidade de cada cliente para criar
+              espaços onde funcionalidade, conforto e identidade coexistam naturalmente.
             </p>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
-              Madeira, elementos naturais e cores fazem parte do seu repertório, mas não existem
-              fórmulas. Cada projeto encontra sua própria linguagem — porque, para Sofia, um
-              espaço só está verdadeiramente resolvido quando quem vive nele consegue se
-              reconhecer.
+              Madeira, elementos naturais e cores fazem parte do meu repertório, mas não existem
+              fórmulas. Cada projeto encontra sua própria linguagem — porque, para mim, um espaço
+              só está verdadeiramente resolvido quando quem vive nele consegue se reconhecer.
             </p>
           </Reveal>
 
           <Reveal className="flex flex-col gap-6">
             <h2 className="font-serif-display text-2xl">Por que SOFSPACE?</h2>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
-              SOFSPACE nasce do mundo de Sofia. Desde pequena, ela sempre gostou de olhar o mundo
-              por outras perspectivas — e <em>space</em> não representa apenas o espaço físico,
-              mas também o espaço onde vivemos, construímos nossas experiências e formamos nossa
+              SOFSPACE nasce do meu mundo. Desde pequena, sempre gostei de olhar o mundo por
+              outras perspectivas — e <em>space</em> não representa apenas o espaço físico, mas
+              também o espaço onde vivemos, construímos nossas experiências e formamos nossa
               maneira de enxergar o mundo.
             </p>
             <p className="max-w-xl text-base leading-relaxed text-[var(--color-ink-soft)]">
-              É o espaço da própria Sofia: uma mente em constante movimento, mudança e descoberta.
-              Em cada projeto, um pouco desse mundo encontra o mundo de quem vai viver aquele
-              espaço — e é desse encontro que nasce a arquitetura.
+              É o meu próprio espaço: uma mente em constante movimento, mudança e descoberta. Em
+              cada projeto, um pouco desse mundo encontra o mundo de quem vai viver aquele espaço
+              — e é desse encontro que nasce a arquitetura.
             </p>
           </Reveal>
 

@@ -24,8 +24,8 @@ export function AboutPreview() {
             Sofia Mariano Lima
           </h2>
           <p className="max-w-lg text-base leading-relaxed text-[var(--color-ink-soft)]">
-            Arquiteta e urbanista formada pela Belas Artes, Sofia conduz a SOFSPACE de forma
-            autoral e próxima. Seu trabalho parte da escuta para transformar necessidades,
+            Sou arquiteta e urbanista, formada pela Belas Artes, e conduzo a SOFSPACE de forma
+            autoral e próxima. Meu trabalho parte da escuta para transformar necessidades,
             desejos e personalidade em espaços que façam sentido para quem os vive.
           </p>
           <Link
